@@ -107,3 +107,40 @@ $("#demo") // by id
 // ------------------------------------------
 
 // Dom manpulation
+
+// getting the text
+// $(document).ready(function(){
+//     let t=$("div").text()
+//     console.log(t)
+// })
+
+// Setting the text
+// $(document).ready(function(){
+//     $("div").text("This is a new text")
+// })
+
+//html
+// $(document).ready(function(){
+//     $("div").html()//getting
+//     $("div").html("<h1>hii</h1>")//setting
+// })
+
+// input value
+// $(document).ready(function(){
+//     let x = $("input").val() //getting
+//     console.log(x)
+//     $("input").val("Hello") //setting
+// })
+
+// // Getting attrbuite value
+// $(document).ready(function(){
+//     console.log($("div").attr("id")) // demo       getting the id or any other attr
+//     $("div").attr("id","Him")//setting it with Him
+//     console.log($("div").attr("id"))//Him
+// })
+
+// -------------
+// Adding [append-prepend-after-before]
+$(document).ready(function(){
+    $("p").append("Hello now i add after the text")
+})
