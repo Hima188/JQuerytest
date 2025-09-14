@@ -185,9 +185,41 @@ $("#demo") // by id
 // })
 // ------------------------------------------------------------------
 // Dimensation
+// $(function(){
+//     console.log($("p").width(""))// the width = 50
+//     console.log($("p").width("100"))// the width = 100
+//     console.log($("p").width())// the width = 100
+//     console.log($("p").innerWidth())// padding + width = 70
+//     console.log($("p").innerWidth("200"))// width = 180 because we supstract the padding from it (pading = 20px)
+//     console.log($("p").outerWidth())// padding + width + border = 74
+//     console.log($("p").outerWidth("200"))// width = 174 because we supstract the padding=20px and the border=4px 
+//     console.log($("p").outerWidth(true))// margin+padding + width + border = 74
+// })
+// ----------------------------------------------------------------------
 
+// Travsling
+// Ancsestor
+// $(function(){
+//     // $("span").parent().css("border", "2px solid red")
+//     // $("li").parent().css("border", "2px solid red")// the direct parent
+//     // $("li").parents().css("border", "2px solid red")//to every parent till the html
+//     // $("li").parents("ul").css("border", "2px solid red")//to every parent ul 
+//     // $("li").parentsUntil("section").css("border", "2px solid red")//to every parent ul 
+// })
+// Decendor
+// $(function(){
+//     $("section").children().css("border", "2px solid red")//direct childs
+//     $("section").children("p").css("border", "2px solid red")//direct childs p only
+//     $("section").find("p").css("border", "2px solid red")// searching for ul under it (grand childs , childs)
+// })
+
+// siblings
 $(function(){
-    $("p").width()//
-    $("p").innerWidth()//
-    $("p").outerWidth()//
+    $("p").siblings().css("border", "2px solid red")// all siblings
+    $("p").next().css("border", "2px solid red")//direct next
+    $("div").perv().css("border", "2px solid red") //direct prev
+    $("div").nextAll().css("border", "2px solid red") // all next
+    $("div").pervAll().css("border", "2px solid red")// all prev
+    $("div").pervUnil("p").css("border", "2px solid red") // prev until p ( we won't take the p)
+    $("div").nextAll("ul").css("border", "2px solid red")// next until ul ( we won't take the ul)
 })
