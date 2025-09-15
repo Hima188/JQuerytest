@@ -195,7 +195,7 @@ $("#demo") // by id
 //     console.log($("p").outerWidth("200"))// width = 174 because we supstract the padding=20px and the border=4px 
 //     console.log($("p").outerWidth(true))// margin+padding + width + border = 74
 // })
-// ----------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 
 // Travsling
 // Ancsestor
@@ -214,12 +214,39 @@ $("#demo") // by id
 // })
 
 // siblings
-$(function(){
-    $("p").siblings().css("border", "2px solid red")// all siblings
-    $("p").next().css("border", "2px solid red")//direct next
-    $("div").perv().css("border", "2px solid red") //direct prev
-    $("div").nextAll().css("border", "2px solid red") // all next
-    $("div").pervAll().css("border", "2px solid red")// all prev
-    $("div").pervUnil("p").css("border", "2px solid red") // prev until p ( we won't take the p)
-    $("div").nextAll("ul").css("border", "2px solid red")// next until ul ( we won't take the ul)
-})
+// $(function(){
+//     $("p").siblings().css("border", "2px solid red")// all siblings
+//     $("p").next().css("border", "2px solid red")//direct next
+//     $("div").perv().css("border", "2px solid red") //direct prev
+//     $("div").nextAll().css("border", "2px solid red") // all next
+//     $("div").pervAll().css("border", "2px solid red")// all prev
+//     $("div").pervUnil("p").css("border", "2px solid red") // prev until p ( we won't take the p)
+//     $("div").nextAll("ul").css("border", "2px solid red")// next until ul ( we won't take the ul)
+// })
+// --------------------------------------------------------------------------------------------------------
+//Filter
+// $(function(){
+//     // $("p").first().css("border","2px solid red")//first p you face
+//     // $("p").last().css("border","2px solid red")// last p
+//     // $("p").eq(0).css("border","2px solid red")// eq(index) 0 first ..... 1 second ..... 2 thrid one ..... and so on 
+//     // $("p").filter('.test').css("border","2px solid red")// filtering and get what we need (class)
+//     // $("p").filter('#1').css("border","2px solid red")// filtering and get what we need  (id)
+//     // $("p").not('.test').css("border","2px solid red")// get everything except what we have inside the not
+// })
+// -------------------------------------------------------------------------------------------------------------
+// Jquery Ajax
+// $(function(){
+//     $.ajax({
+//         type:"Get", // the request (post - get)
+//         url:"https://jsonplaceholder.typicode.com/posts", // where we gonna send the request
+//         data:{
+//             format:"json",
+//         },
+//         error:function(){ // if happend error
+//             console.log(err);
+//         },
+//         success:function(data){ // if success
+//             console.log("data",data)
+//         },
+//     });
+// });
